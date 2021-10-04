@@ -21,3 +21,13 @@ function getArraysLineIntersection(a1,a2){
 }
 
 console.log(getArraysLineIntersection(inputArr, patternArr))
+
+//                               ТРЕТИЙ РЕЖИМ                                  //
+
+
+Array.prototype.diff = function(a) {
+    return this.filter(function(i) {return a.indexOf(i) < 0;});
+};
+
+  
+console.log(inputArr.diff(patternArr));
